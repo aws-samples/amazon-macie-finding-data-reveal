@@ -1,0 +1,3 @@
+﻿SSN,type,birthdate,middle,last_name,first_name,address,city,state,zip,phone,email,cc_type,CCN,cc_cvc,cc_expiredate
+000-11-1111,a,1/11/1111,Rosalez,Rosalez,Alejandro,123 Any Street,Anytown1,CA,11111,555-0100,user1@example.com,m,4111-1111-1111-1111,111,1111/11/11
+000-11-1111,a,11/11/1111,Mansa,Mansa,Akua,456 Any Street,Anytown2,KS,11111,555-0100,user2@example.com,m,4111-1111-1111-1111,111,1111/11/11

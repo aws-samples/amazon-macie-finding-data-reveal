@@ -1,0 +1,253 @@
+{
+  "accountId": "555555555555",
+  "archived": false,
+  "category": "CLASSIFICATION",
+  "classificationDetails": {
+    "detailedResultsLocation": "s3://DOC-EXAMPLE-BUCKET/AWSLogs/555555555555/Macie/us-east-1/55555555555555555555555555555555/555555555555/53039a83-54e8-33b5-aed0-5d5bb32c7178.jsonl.gz",
+    "jobArn": "arn:aws:macie2:us-east-1:555555555555:classification-job/55555555555555555555555555555555",
+    "jobId": "55555555555555555555555555555555",
+    "result": {
+      "additionalOccurrences": true,
+      "customDataIdentifiers": {
+        "detections": [],
+        "totalCount": 0
+      },
+      "mimeType": "text/csv",
+      "sensitiveData": [
+        {
+          "category": "FINANCIAL_INFORMATION",
+          "detections": [
+            {
+              "count": 30,
+              "occurrences": {
+                "cells": [
+                  {
+                    "cellReference": null,
+                    "column": 14,
+                    "columnName": "CCN",
+                    "row": 2
+                  },
+                  {
+                    "cellReference": null,
+                    "column": 14,
+                    "columnName": "CCN",
+                    "row": 3
+                  }
+                ]
+              },
+              "type": "CREDIT_CARD_NUMBER"
+            }
+          ],
+          "totalCount": 30
+        },
+        {
+          "category": "PERSONAL_INFORMATION",
+          "detections": [
+            {
+              "count": 30,
+              "occurrences": {
+                "cells": [
+                  {
+                    "cellReference": null,
+                    "column": 1,
+                    "columnName": "SSN",
+                    "row": 2
+                  },
+                  {
+                    "cellReference": null,
+                    "column": 1,
+                    "columnName": "SSN",
+                    "row": 3
+                  },
+                  {
+                    "cellReference": null,
+                    "column": 1,
+                    "columnName": "SSN",
+                    "row": 4
+                  }
+                ]
+              },
+              "type": "USA_SOCIAL_SECURITY_NUMBER"
+            },
+            {
+              "count": 28,
+              "occurrences": {
+                "cells": [
+                  {
+                    "cellReference": null,
+                    "column": 11,
+                    "columnName": "phone",
+                    "row": 3
+                  },
+                  {
+                    "cellReference": null,
+                    "column": 11,
+                    "columnName": "phone",
+                    "row": 5
+                  },
+                  {
+                    "cellReference": null,
+                    "column": 11,
+                    "columnName": "phone",
+                    "row": 6
+                  }
+                ]
+              },
+              "type": "PHONE_NUMBER"
+            },
+            {
+              "count": 30,
+              "occurrences": {
+                "cells": [
+                  {
+                    "cellReference": null,
+                    "column": 3,
+                    "columnName": "birthdate",
+                    "row": 2
+                  },
+                  {
+                    "cellReference": null,
+                    "column": 3,
+                    "columnName": "birthdate",
+                    "row": 3
+                  }
+                ]
+              },
+              "type": "DATE_OF_BIRTH"
+            },
+            {
+              "count": 20,
+              "occurrences": {
+                "cells": [
+                  {
+                    "cellReference": null,
+                    "column": 5,
+                    "columnName": "last_name",
+                    "row": 3
+                  },
+                  {
+                    "cellReference": null,
+                    "column": 5,
+                    "columnName": "last_name",
+                    "row": 4
+                  }
+                ]
+              },
+              "type": "NAME"
+            },
+            {
+              "count": 28,
+              "occurrences": {
+                "cells": [
+                  {
+                    "cellReference": null,
+                    "column": 1,
+                    "columnName": "SSN",
+                    "row": 2
+                  },
+                  {
+                    "cellReference": null,
+                    "column": 1,
+                    "columnName": "SSN",
+                    "row": 3
+                  },
+                  {
+                    "cellReference": null,
+                    "column": 3,
+                    "columnName": "birthdate",
+                    "row": 4
+                  }
+                ]
+              },
+              "type": "ADDRESS"
+            }
+          ],
+          "totalCount": 136
+        }
+      ],
+      "sizeClassified": 4750,
+      "status": {
+        "code": "COMPLETE",
+        "reason": null
+      }
+    }
+  },
+  "count": 1,
+  "createdAt": "2021-10-25T23:25:04.250Z",
+  "description": "The object contains more than one type of sensitive information.",
+  "id": "00000000000000000000000000000001",
+  "partition": "aws",
+  "region": "us-east-1",
+  "resourcesAffected": {
+    "s3Bucket": {
+      "allowsUnencryptedObjectUploads": "TRUE",
+      "arn": "arn:aws:s3:::DOC-EXAMPLE-BUCKET1",
+      "createdAt": "2021-01-19T18:41:37.000Z",
+      "defaultServerSideEncryption": {
+        "encryptionType": "AES256",
+        "kmsMasterKeyId": null
+      },
+      "name": "DOC-EXAMPLE-BUCKET1",
+      "owner": {
+        "displayName": "testdata",
+        "id": "5555555555555555555555555555555555555555555555555555555555555555"
+      },
+      "publicAccess": {
+        "effectivePermission": "NOT_PUBLIC",
+        "permissionConfiguration": {
+          "accountLevelPermissions": {
+            "blockPublicAccess": {
+              "blockPublicAcls": true,
+              "blockPublicPolicy": true,
+              "ignorePublicAcls": true,
+              "restrictPublicBuckets": true
+            }
+          },
+          "bucketLevelPermissions": {
+            "accessControlList": {
+              "allowsPublicReadAccess": false,
+              "allowsPublicWriteAccess": false
+            },
+            "blockPublicAccess": {
+              "blockPublicAcls": true,
+              "blockPublicPolicy": true,
+              "ignorePublicAcls": true,
+              "restrictPublicBuckets": true
+            },
+            "bucketPolicy": {
+              "allowsPublicReadAccess": false,
+              "allowsPublicWriteAccess": false
+            }
+          }
+        }
+      },
+      "tags": []
+    },
+    "s3Object": {
+      "bucketArn": "arn:aws:s3:::DOC-EXAMPLE-BUCKET1",
+      "eTag": "00000000000000000000000000000000",
+      "extension": "csv",
+      "key": "macie-workshop/sample-data.csv",
+      "lastModified": "2021-10-25T14:34:20.000Z",
+      "path": "DOC-EXAMPLE-BUCKET1/macie-workshop/sample-data.csv",
+      "publicAccess": false,
+      "serverSideEncryption": {
+        "encryptionType": "AES256",
+        "kmsMasterKeyId": null
+      },
+      "size": 4750,
+      "storageClass": "STANDARD",
+      "tags": [],
+      "versionId": ""
+    }
+  },
+  "sample": false,
+  "schemaVersion": "1.0",
+  "severity": {
+    "description": "High",
+    "score": 3
+  },
+  "title": "The S3 object contains multiple types of sensitive information.",
+  "type": "SensitiveData:S3Object/Multiple",
+  "updatedAt": "2021-10-25T23:25:04.250Z"
+}

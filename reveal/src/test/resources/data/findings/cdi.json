@@ -1,0 +1,118 @@
+{
+  "accountId": "555555555555",
+  "archived": false,
+  "category": "CLASSIFICATION",
+  "classificationDetails": {
+    "detailedResultsLocation": "s3://DOC-EXAMPLE-BUCKET/AWSLogs/555555555555/Macie/us-east-1/55555555555555555555555555555555/555555555555/bca1db4c-fb51-38cc-8555-bae4f195cf71.jsonl.gz",
+    "jobArn": "arn:aws:macie2:us-east-1:555555555555:classification-job/55555555555555555555555555555555",
+    "jobId": "55555555555555555555555555555555",
+    "result": {
+      "additionalOccurrences": true,
+      "customDataIdentifiers": {
+        "detections": [
+          {
+            "arn": "bb33b7c9-fb77-4f97-9690-1ca94f02e92a",
+            "count": 1,
+            "name": "email check",
+            "occurrences": {
+              "cells": [
+                {
+                  "cellReference": null,
+                  "column": 12,
+                  "columnName": "email",
+                  "row": 2
+                }
+              ]
+            }
+          }
+        ],
+        "totalCount": 1
+      },
+      "mimeType": "text/csv",
+      "sensitiveData": [],
+      "sizeClassified": 4855,
+      "status": {
+        "code": "COMPLETE",
+        "reason": null
+      }
+    }
+  },
+  "count": 1,
+  "createdAt": "2022-03-11T05:49:17.220Z",
+  "description": "This object contains content that matches one or more custom data identifiers for the organization. The content might include multiple types of sensitive information.",
+  "id": "00000000000000000000000000000005",
+  "partition": "aws",
+  "region": "us-east-1",
+  "resourcesAffected": {
+    "s3Bucket": {
+      "allowsUnencryptedObjectUploads": "TRUE",
+      "arn": "arn:aws:s3:::DOC-EXAMPLE-BUCKET1",
+      "createdAt": "2022-03-11T05:29:05.000Z",
+      "defaultServerSideEncryption": {
+        "encryptionType": "NONE",
+        "kmsMasterKeyId": null
+      },
+      "name": "DOC-EXAMPLE-BUCKET1",
+      "owner": {
+        "displayName": "testdata",
+        "id": "5555555555555555555555555555555555555555555555555555555555555555"
+      },
+      "publicAccess": {
+        "effectivePermission": "NOT_PUBLIC",
+        "permissionConfiguration": {
+          "accountLevelPermissions": {
+            "blockPublicAccess": {
+              "blockPublicAcls": true,
+              "blockPublicPolicy": true,
+              "ignorePublicAcls": true,
+              "restrictPublicBuckets": true
+            }
+          },
+          "bucketLevelPermissions": {
+            "accessControlList": {
+              "allowsPublicReadAccess": false,
+              "allowsPublicWriteAccess": false
+            },
+            "blockPublicAccess": {
+              "blockPublicAcls": true,
+              "blockPublicPolicy": true,
+              "ignorePublicAcls": true,
+              "restrictPublicBuckets": true
+            },
+            "bucketPolicy": {
+              "allowsPublicReadAccess": false,
+              "allowsPublicWriteAccess": false
+            }
+          }
+        }
+      },
+      "tags": []
+    },
+    "s3Object": {
+      "bucketArn": "arn:aws:s3:::DOC-EXAMPLE-BUCKET1",
+      "eTag": "00000000000000000000000000000000",
+      "extension": "csv",
+      "key": "test-cdi.csv",
+      "lastModified": "2022-03-11T05:29:29.000Z",
+      "path": "DOC-EXAMPLE-BUCKET1/test-cdi.csv",
+      "publicAccess": false,
+      "serverSideEncryption": {
+        "encryptionType": "NONE",
+        "kmsMasterKeyId": null
+      },
+      "size": 4855,
+      "storageClass": "STANDARD",
+      "tags": [],
+      "versionId": ""
+    }
+  },
+  "sample": false,
+  "schemaVersion": "1.0",
+  "severity": {
+    "description": "Medium",
+    "score": 2
+  },
+  "title": "The S3 object contains content that matches a custom data identifier.",
+  "type": "SensitiveData:S3Object/CustomIdentifier",
+  "updatedAt": "2022-03-11T05:49:17.220Z"
+}

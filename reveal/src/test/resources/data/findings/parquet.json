@@ -1,0 +1,224 @@
+
+{
+    "accountId": "555555555555",
+    "archived": false,
+    "category": "CLASSIFICATION",
+    "classificationDetails": {
+    "detailedResultsLocation": "s3://DOC-EXAMPLE-BUCKET/AWSLogs/555555555555/Macie/us-east-1/55555555555555555555555555555555/555555555555/9eea5504-d2d2-3309-8094-55ab06461829.jsonl.gz",
+        "jobArn": "arn:aws:macie2:us-east-1:555555555555:classification-job/55555555555555555555555555555555",
+        "jobId": "55555555555555555555555555555555",
+        "result": {
+        "additionalOccurrences": true,
+            "customDataIdentifiers": {
+            "detections": [],
+                "totalCount": 0
+        },
+        "mimeType": "application/parquet",
+            "sensitiveData": [
+            {
+                "category": "FINANCIAL_INFORMATION",
+                "detections": [
+                    {
+                        "count": 30,
+                        "occurrences": {
+                            "records": [
+                                {
+                                    "jsonPath": "$.CCN",
+                                    "recordIndex": 0
+                                },
+                                {
+                                    "jsonPath": "$.CCN",
+                                    "recordIndex": 1
+                                }
+                            ]
+                        },
+                        "type": "CREDIT_CARD_NUMBER"
+                    }
+                ],
+                "totalCount": 30
+            },
+            {
+                "category": "PERSONAL_INFORMATION",
+                "detections": [
+                    {
+                        "count": 27,
+                        "occurrences": {
+                            "records": [
+                                {
+                                    "jsonPath": "$.first_name",
+                                    "recordIndex": 1
+                                },
+                                {
+                                    "jsonPath": "$.first_name",
+                                    "recordIndex": 2
+                                }
+                            ]
+                        },
+                        "type": "NAME"
+                    },
+                    {
+                        "count": 6,
+                        "occurrences": {
+                            "records": [
+                                {
+                                    "jsonPath": "$.SSN",
+                                    "recordIndex": 0
+                                },
+                                {
+                                    "jsonPath": "$.city",
+                                    "recordIndex": 10
+                                },
+                                {
+                                    "jsonPath": "$.city",
+                                    "recordIndex": 15
+                                }
+                            ]
+                        },
+                        "type": "ADDRESS"
+                    },
+                    {
+                        "count": 30,
+                        "occurrences": {
+                            "records": [
+                                {
+                                    "jsonPath": "$.SSN",
+                                    "recordIndex": 0
+                                },
+                                {
+                                    "jsonPath": "$.SSN",
+                                    "recordIndex": 1
+                                },
+                                {
+                                    "jsonPath": "$.SSN",
+                                    "recordIndex": 2
+                                }
+                            ]
+                        },
+                        "type": "USA_SOCIAL_SECURITY_NUMBER"
+                    },
+                    {
+                        "count": 30,
+                        "occurrences": {
+                            "records": [
+                                {
+                                    "jsonPath": "$.phone",
+                                    "recordIndex": 0
+                                },
+                                {
+                                    "jsonPath": "$.phone",
+                                    "recordIndex": 1
+                                },
+                                {
+                                    "jsonPath": "$.phone",
+                                    "recordIndex": 2
+                                }
+                            ]
+                        },
+                        "type": "PHONE_NUMBER"
+                    },
+                    {
+                        "count": 30,
+                        "occurrences": {
+                            "records": [
+                                {
+                                    "jsonPath": "$.birthdate",
+                                    "recordIndex": 0
+                                },
+                                {
+                                    "jsonPath": "$.birthdate",
+                                    "recordIndex": 1
+                                }
+                            ]
+                        },
+                        "type": "DATE_OF_BIRTH"
+                    }
+                ],
+                "totalCount": 123
+            }
+        ],
+            "sizeClassified": 8097,
+            "status": {
+            "code": "COMPLETE",
+                "reason": null
+        }
+    }
+},
+    "count": 1,
+    "createdAt": "2021-11-22T21:22:03.967Z",
+    "description": "The object contains more than one type of sensitive information.",
+    "id": "00000000000000000000000000000003",
+    "partition": "aws",
+    "region": "us-east-1",
+    "resourcesAffected": {
+    "s3Bucket": {
+        "allowsUnencryptedObjectUploads": "TRUE",
+            "arn": "arn:aws:s3:::DOC-EXAMPLE-BUCKET1",
+            "createdAt": "2021-01-19T18:41:37.000Z",
+            "defaultServerSideEncryption": {
+            "encryptionType": "AES256",
+                "kmsMasterKeyId": null
+        },
+        "name": "DOC-EXAMPLE-BUCKET1",
+            "owner": {
+            "displayName": "testdata",
+                "id": "5555555555555555555555555555555555555555555555555555555555555555"
+        },
+        "publicAccess": {
+            "effectivePermission": "NOT_PUBLIC",
+                "permissionConfiguration": {
+                "accountLevelPermissions": {
+                    "blockPublicAccess": {
+                        "blockPublicAcls": true,
+                            "blockPublicPolicy": true,
+                            "ignorePublicAcls": true,
+                            "restrictPublicBuckets": true
+                    }
+                },
+                "bucketLevelPermissions": {
+                    "accessControlList": {
+                        "allowsPublicReadAccess": false,
+                            "allowsPublicWriteAccess": false
+                    },
+                    "blockPublicAccess": {
+                        "blockPublicAcls": true,
+                            "blockPublicPolicy": true,
+                            "ignorePublicAcls": true,
+                            "restrictPublicBuckets": true
+                    },
+                    "bucketPolicy": {
+                        "allowsPublicReadAccess": false,
+                            "allowsPublicWriteAccess": false
+                    }
+                }
+            }
+        },
+        "tags": []
+    },
+    "s3Object": {
+        "bucketArn": "arn:aws:s3:::DOC-EXAMPLE-BUCKET1",
+            "eTag": "00000000000000000000000000000000",
+            "extension": "parquet",
+            "key": "records/sample-data.parquet",
+            "lastModified": "2021-11-22T21:16:48.000Z",
+            "path": "DOC-EXAMPLE-BUCKET1/records/sample-data.parquet",
+            "publicAccess": false,
+            "serverSideEncryption": {
+            "encryptionType": "AES256",
+                "kmsMasterKeyId": null
+        },
+        "size": 8097,
+            "storageClass": "STANDARD",
+            "tags": [],
+            "versionId": ""
+    }
+},
+    "sample": false,
+    "schemaVersion": "1.0",
+    "severity": {
+    "description": "High",
+        "score": 3
+},
+    "title": "The S3 object contains multiple types of sensitive information.",
+    "type": "SensitiveData:S3Object/Multiple",
+    "updatedAt": "2021-11-22T21:22:03.967Z"
+}

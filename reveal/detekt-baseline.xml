@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <!-- CLI defaults -->
+    <ID>MagicNumber:App.kt$App$5</ID>
+    <ID>SpreadOperator:App.kt$(*args)</ID>
+
+    <!-- We catch general exceptions to keep CLI UX neat. -->
+    <ID>SwallowedException:AvroRecordLocator.kt$AvroRecordLocator$catch (e: Exception) { logger.warn { "invalid record reference $record" } }</ID>
+    <ID>SwallowedException:CsvRecordLocator.kt$CsvRecordLocator$catch (e: Exception) { logger.warn { "invalid line reference $it" } }</ID>
+    <ID>SwallowedException:JsonRecordLocator.kt$JsonRecordLocator$catch (e: Exception) { logger.warn { "invalid record reference $path" } }</ID>
+    <ID>SwallowedException:LineRangeRecordLocator.kt$LineRangeRecordLocator$catch (e: Exception) { logger.warn { "invalid line reference $l" } }</ID>
+    <ID>SwallowedException:ParquetRecordLocator.kt$ParquetRecordLocator$catch (e: Exception) { logger.warn { "invalid column $col" } }</ID>
+    <ID>SwallowedException:XLSRecordLocator.kt$XLSRecordLocator$catch (e: Exception) { logger.warn { "invalid line reference $it" } }</ID>
+    <ID>TooGenericExceptionCaught:App.kt$App$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:AvroRecordLocator.kt$AvroRecordLocator$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:CsvRecordLocator.kt$CsvRecordLocator$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:JsonRecordLocator.kt$JsonRecordLocator$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:LineRangeRecordLocator.kt$LineRangeRecordLocator$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ParquetRecordLocator.kt$ParquetRecordLocator$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:XLSRecordLocator.kt$XLSRecordLocator$e: Exception</ID>
+  </CurrentIssues>
+</SmellBaseline>

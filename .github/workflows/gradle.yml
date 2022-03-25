@@ -24,6 +24,7 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+        cache: gradle
 
     # ================ Build Step ================
     - name: Build with Gradle

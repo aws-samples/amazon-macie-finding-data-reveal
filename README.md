@@ -1,11 +1,14 @@
 ### Macie Finding Data Reveal
 
-This project contains a command line utility to help you analyze Macie findings. Macie generates
-sensitive data findings when it discovers sensitive data in S3 objects that you configure a
-sensitive data discovery job to analyze. The finding includes [locators] that point to where the
-specific sensitive data was observed. The operator can follow these pointers to see what Macie saw
-in the object. This follow-up helps the operator (usually a security engineer) decide what to do
-next with the specific finding. The CLI in this package automates the manual work involved there.
+This project contains a command line utility to help you investigate the sensitive data associated
+with Macie findings. Macie generates sensitive data findings when it discovers sensitive data in S3
+objects that you configure a sensitive data discovery job to analyze. The finding includes
+[locators] that point to where the specific sensitive data was observed. The operator can follow
+these pointers to see what Macie saw in the object. This follow-up helps the operator (usually a
+security engineer) validate that the discovered data is a true positive and decide what to do next
+with the specific finding and the object where the data was discovered. The CLI in this package
+automates the manual steps involved with retrieving the object where the sensitive data was
+discovered and viewing the discovered sensitive data based on its location.
 
 [locators]: https://docs.aws.amazon.com/macie/latest/user/findings-locate-sd.html
 
@@ -19,8 +22,10 @@ the occurrences that are often sufficient to make the decision.
 
 ![](occurrences.png)
 
-If these /pointers/ are not enough for a particular finding and you need to see the exact data Macie
-saw to generate this finding - this is the tool for you.
+
+Macie also provides the location of the sensitive data within the object that the finding is for.
+If you need to see the exact discovered data in order to make a decision on what to do with the
+finding this tool can be used to reveal the sensitive data contained within the object.
 
 ### Build and Install
 
@@ -39,6 +44,13 @@ define an alias:
 ```bash
 > alias reveal="java -jar ${PWD}/reveal/build/libs/reveal-executable.jar"
 ```
+
+### Permissions
+
+The tool makes use of public API calls to S3 and Macie, so the usual IAM access control applies. The
+caller needs to have the permissions to invoke `macie:GetFindings` on the account and `s3:GetObject`
+on the specific object reported in the finding.
+
 
 ### Usage
 
@@ -105,12 +117,6 @@ mime-types are supported:
 
 Please create an issue if a format you'd like to see isn't on the list. We'll try to add it,
 contributions are welcome too!
-
-### Permissions
-
-The tool makes use of public API calls to S3 and Macie, so the usual IAM access control applies. The
-caller needs to have the permissions to invoke `macie:GetFindings` on the account and `s3:GetObject`
-on the specific object reported in the finding.
 
 ### Troubleshooting
 

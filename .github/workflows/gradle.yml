@@ -37,5 +37,5 @@ jobs:
     # Package Step
     - uses: actions/upload-artifact@v3
       with:
-        name: Package
+        name: amazon-macie-finding-data-reveal-artifact
         path: reveal/build/libs

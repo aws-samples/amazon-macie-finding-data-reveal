@@ -38,4 +38,4 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: amazon-macie-finding-data-reveal-artifact
-        path: reveal/build/libs
+        path: reveal/build/libs/reveal-executable.jar

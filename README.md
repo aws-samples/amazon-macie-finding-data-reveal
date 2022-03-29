@@ -1,5 +1,7 @@
 ### Macie Finding Data Reveal
 
+[![Java CI with Gradle](https://github.com/aws-samples/amazon-macie-finding-data-reveal/actions/workflows/gradle.yml/badge.svg?branch=main)](https://github.com/aws-samples/amazon-macie-finding-data-reveal/actions/workflows/gradle.yml)
+
 This project contains a command line utility to help you investigate the sensitive data associated
 with Macie findings. Macie generates sensitive data findings when it discovers sensitive data in S3
 objects that you configure a sensitive data discovery job to analyze. The finding includes

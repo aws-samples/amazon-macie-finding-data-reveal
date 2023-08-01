@@ -140,7 +140,7 @@ class Reveal(private val aws: AwsDependencies = object : AwsDependencies {}) : R
         /**
          * The biggest object we'll fetch from S3.
          */
-        private const val MAX_SIZE = 10 * 1024 * 1024
+        private const val MAX_SIZE = 300 * 1024 * 1024
 
         /**
          * The JSONPath configuration used to extract locators.

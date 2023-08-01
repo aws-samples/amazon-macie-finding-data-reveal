@@ -14,6 +14,7 @@ object LocatorRegistry {
         "text/csv" to CsvRecordLocator,
         "application/parquet" to ParquetRecordLocator,
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" to XLSRecordLocator,
+        "application/gzip" to GzipRecordLocator,
     )
 
     fun getLocatorForMime(mime: String): Locator? {
